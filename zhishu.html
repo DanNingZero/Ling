@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>质数</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var num = 100;
+        var i=2;
+        var k,j;
+        for(i=2;i<num;i++){
+            k=parseInt(Math.sqrt(i));
+            for(j=2;j<=k;j++){
+                if(num%j==0){
+                    break;
+                }
+            }
+        }
+
+        //i=2-100之间所有的数字
+        //k=i值整数平方根
+        //d=i值所有平方根的值
+        var k;
+        for (var i = 2; i <= 100; i++) {
+            k=parseInt(Math.sqrt(i));             //取2-100之间每个数的整数平方根
+            for(var d = 2; d <= k; d++){          
+                if(i%d==0){
+                    break;
+                }
+            }  //2-i值所有整数平方根的值
+            if (d>k) {                          //%取余，如果i（2-100之间的所有的数字）除以d（i值所有的平方根）的余数为0
+                console.log(i+"是质数");
+            }
+
+        }  //2-100之间的所有数字
+
+
+
+
+       
+       
+        // for (var i = 2; i <= 9; i++) {
+            
+        //     if (i>0) {
+        //         break;
+        //     }else{
+        //         //console.log(i)
+        //     }
+        // }
+        
+    </script>
+</body>
+</html>

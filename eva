@@ -1,0 +1,56 @@
+
+
+for(var i=0;i<routes.length;i++){
+   for(var j=0;j<routes[i].length;j++){
+       if(typeof(routes[i][j])=='object'){
+                console.log(routes[i][j]);       //组件
+           if( typeof routes[i][j].length=='number'){ 
+                        console.log(routes[i][j][t]);        //数组
+                        for(var t=0;t<routes[i][j].length;t++){
+                            console.log(routes[i][j][t]);
+                        }
+            }else{ 
+                    console.log(routes[i][j][t]);
+            } 
+       }else{
+          console.log(routes[i][j]);     //字符
+       }
+    }
+} 
+
+
+var routes = [
+    ["上传试题","upload-question",[
+        ["语文","upload-question"],
+        ["数学","test"],
+        ["数学2","test2"],]
+    ],
+    ["测试菜单","test"],
+    ["测试菜单2","test2"],
+]
+for(var i=0;i<routes.length;i++){
+   for(var j=0;j<routes[i].length;j++){
+       if(typeof(routes[i][j])=='object'){
+           if( typeof routes[i][j].length=='number'){ 
+                        console.log(routes[i][j][t]);        //数组
+                        for(var t=0;t<routes[i][j].length;t++){
+                            console.log(routes[i][j][t]);
+                        }
+            }else{ 
+                    console.log(routes[i][j][t]);
+            } 
+       }else{
+          console.log(routes[i][j]);     //字符
+       }
+    }
+} 
+   上传试题
+   upload-question
+   undefined
+   ["语文", "upload-question"]
+   ["数学", "test"]
+   ["数学2", "test2"]
+   测试菜单
+   test
+   测试菜单2
+   test2
